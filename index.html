@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b1b">
+  <meta name="description" content="Team Aviators — a storm-chasing community for Roblox Twisted, Stormworks and Kerbal Space Program.">
+  <title>Team Aviators | Storm Chasing & Gaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Team Aviators home">
+      <img src="https://raw.githubusercontent.com/109Giraffe/82.165.54.22/main/assets/Aviators%20Chasing%20Team%20logo%20design.png" alt="Team Aviators logo">
+      <span>TEAM <b>AVIATORS</b></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#games">Games</a><a href="#community">Community</a><a href="#about">About</a>
+      <a class="nav-join" href="https://discord.gg/yEB6D96JBm" target="_blank" rel="noopener noreferrer">Join Discord <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> STORM CHASING • GAMING • COMMUNITY</div>
+        <h1>CHASE THE<br><span>STORM.</span><br>OWN THE SKY.</h1>
+        <p class="hero-text">A community for storm chasers, aviation fans and gamers. From chasing tornadoes in Twisted to building, exploring and creating together.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://discord.gg/yEB6D96JBm" target="_blank" rel="noopener noreferrer">Join the community <span>↗</span></a>
+          <a class="button secondary" href="#games">Explore our games <span>↓</span></a>
+        </div>
+        <div class="hero-proof"><span class="proof-dot"></span><span>One community. Multiple worlds.</span></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Dramatic storm clouds over a landscape">
+        <div class="art-overlay"></div>
+        <div class="art-label"><span class="live-dot"></span> EYES ON THE WEATHER <small>Always ready for the next chase</small></div>
+        <div class="art-mark">TA<span>.</span></div>
+      </div>
+      <div class="hero-bottom"><span>01 / THE AVIATORS</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="section games-section" id="games">
+      <div class="section-heading"><div><div class="eyebrow">OUR PLAYGROUND</div><h2>Different worlds.<br><span>Same crew.</span></h2></div><p>Whether you're tracking storms, engineering machines or exploring the stars, there's a place for you here.</p></div>
+      <div class="game-grid">
+        <article class="game-card game-twisted">
+          <div class="game-number">01 / MAIN GAME</div><div class="game-icon">⛈</div>
+          <div class="game-content"><div class="game-tag">ROBLOX</div><h3>Twisted</h3><p>Get out in the field, follow the weather and chase the next big storm with the community.</p><a href="https://www.roblox.com/games/" target="_blank" rel="noopener noreferrer" class="text-link">Explore Roblox <span>↗</span></a></div>
+        </article>
+        <article class="game-card game-stormworks">
+          <div class="game-number">02 / ENGINEERING</div><div class="game-icon">⚙</div>
+          <div class="game-content"><div class="game-tag">BUILD • RESCUE • EXPLORE</div><h3>Stormworks</h3><p>Design wild creations, solve engineering challenges and take on missions together.</p><a href="https://store.steampowered.com/app/573090/Stormworks_Build_and_Rescue/" target="_blank" rel="noopener noreferrer" class="text-link">View on Steam <span>↗</span></a></div>
+        </article>
+        <article class="game-card game-ksp">
+          <div class="game-number">03 / SPACE PROGRAMME</div><div class="game-icon">🚀</div>
+          <div class="game-content"><div class="game-tag">BUILD • LAUNCH • DISCOVER</div><h3>Kerbal Space Program</h3><p>Build spacecraft, plan ambitious missions and push your space programme further.</p><a href="https://store.steampowered.com/app/220200/Kerbal_Space_Program/" target="_blank" rel="noopener noreferrer" class="text-link">View on Steam <span>↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="status-section" id="status">
+      <div class="status-intro"><div class="eyebrow">SERVER TELEMETRY</div><h2>Systems <span>check.</span></h2><p>A quick look at the game servers. Live data appears when the monitoring feeds are available.</p><span class="updated" id="updated-at">Checking status…</span></div>
+      <div class="status-list">
+        <article class="status-row"><div class="status-game-icon">⚙</div><div class="status-name"><b>Stormworks</b><small>Build & Rescue</small></div><div class="status-state"><span class="status-indicator unknown" id="stormworks-dot"></span><span id="stormworks-state">Checking…</span></div><div class="status-players"><b id="stormworks-players">—</b><small>players</small></div></article>
+        <article class="status-row"><div class="status-game-icon">🚀</div><div class="status-name"><b>Kerbal Space Program</b><small>Luna multiplayer</small></div><div class="status-state"><span class="status-indicator unknown" id="ksp-dot"></span><span id="ksp-state">Checking…</span></div><div class="status-players"><b id="ksp-players">—</b><small>players</small></div></article>
+        <article class="status-row"><div class="status-game-icon">⛈</div><div class="status-name"><b>Twisted</b><small>Roblox community game</small></div><div class="status-state"><span class="status-indicator community"></span><span>Community game</span></div><div class="status-players"><b>↗</b><small>Roblox</small></div></article>
+      </div>
+    </section>
+
+    <section class="community-section" id="community">
+      <div class="community-visual"><img class="community-logo" src="https://raw.githubusercontent.com/109Giraffe/82.165.54.22/main/assets/Aviators%20Chasing%20Team%20logo%20design.png" alt="Team Aviators emblem"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div></div>
+      <div class="community-copy"><div class="eyebrow">YOUR NEXT CREW</div><h2>Good people.<br><span>Big adventures.</span></h2><p>Team Aviators is built around a shared love of storm chasing, aviation, gaming and making things. Find your people, join the conversation and get involved.</p><a class="button primary" href="https://discord.gg/yEB6D96JBm" target="_blank" rel="noopener noreferrer">Find us on Discord <span>↗</span></a><div class="community-note">Friendly community · Shared interests · New adventures</div></div>
+    </section>
+
+    <section class="about-strip" id="about"><div class="about-symbol">✦</div><div><div class="eyebrow">ABOUT TEAM AVIATORS</div><h2>Curiosity takes us further.</h2><p>From the storm front to the launchpad, we're here for the people who love to explore, create and learn.</p></div><a class="button secondary" href="https://discord.gg/yEB6D96JBm" target="_blank" rel="noopener noreferrer">Come say hello <span>↗</span></a></section>
+  </main>
+  <footer><a class="footer-brand" href="#home">TEAM <b>AVIATORS</b></a><span>Storm chasing, gaming & good company.</span><a href="https://discord.gg/yEB6D96JBm" target="_blank" rel="noopener noreferrer">Discord ↗</a><span class="copyright">© <span id="year"></span> Team Aviators</span></footer>
+</body>
+</html>
